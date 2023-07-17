@@ -13,13 +13,58 @@
       <div class="flex container mx-auto justify-between items-center">
         <a
           href="#"
-          class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm"
+          class="hover:opacity-70 transition-opacity focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 lg:absolute lg:left-1/2 lg:top-9 lg:-translate-x-1/2"
           ><img
             src="./assets/logo.svg"
             alt="Logo"
             width="200"
             class="w-48 md:w-64 lg:w-72"
         /></a>
+        <button id="menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-9 h-9 lg:hidden focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div
+          role="menubar "
+          class="flex flex-col gap-4 absolute right-0 left-0 top-16 bg-amber-500 shadow-xl text-center p-6 font-medium"
+        >
+          <a
+            role="menuitem"
+            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            href=""
+            >Home</a
+          >
+          <a
+            role="menuitem"
+            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            href=""
+            >Contacts</a
+          >
+          <a
+            role="menuitem"
+            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            href=""
+            >Login</a
+          >
+          <a
+            role="menuitem"
+            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            href=""
+            >Sign up</a
+          >
+        </div>
       </div>
     </nav>
   </body>
