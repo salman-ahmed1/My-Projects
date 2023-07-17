@@ -20,14 +20,19 @@
             width="200"
             class="w-48 md:w-64 lg:w-72"
         /></a>
-        <button id="menu">
+        <button
+          id="menu"
+          aria-expanded="false"
+          aria-label="open menu"
+          class="lg:hidden focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-9 h-9 lg:hidden focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            class="w-9 h-9"
           >
             <path
               stroke-linecap="round"
@@ -37,35 +42,65 @@
           </svg>
         </button>
         <div
-          role="menubar "
-          class="flex flex-col gap-4 absolute right-0 left-0 top-16 bg-amber-500 shadow-xl text-center p-6 font-medium"
+          role="menubar"
+          class="hidden flex-col items-center gap-4 absolute right-0 left-0 top-16 bg-amber-500 shadow-xl text-center p-6 font-medium lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full"
         >
           <a
             role="menuitem"
-            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            class="py-1 px-6 focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 hover:text-neutral-600 transition-colors dark:text-neutral-900"
             href=""
             >Home</a
           >
           <a
             role="menuitem"
-            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            class="py-1 lg:mr-auto px-6 focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 hover:text-neutral-600 transition-colors dark:text-neutral-900"
             href=""
             >Contacts</a
           >
           <a
             role="menuitem"
-            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            class="py-1 px-6 focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 hover:text-neutral-600 transition-colors dark:text-neutral-900"
             href=""
             >Login</a
           >
           <a
             role="menuitem"
-            class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-sm ring-offset-4 ring-offset-amber-500 text-neutral-900 hover:text-neutral-600 transition-colors"
+            class="py-2 px-6 bg-teal-900 text-white shadow-xl rounded-md focus:outline-none focus-visible:ring-4 ring-neutral-900 ring-offset-4 ring-offset-amber-500 hover:bg-teal-700 hover:shadow-none transition-all dark:text-neutral-900"
             href=""
             >Sign up</a
           >
         </div>
       </div>
     </nav>
+    <header class="relative pt-16 md:pt-24 lg:pt-48">
+      <div
+        class="absolute inset-0 bottom-8 md:bottom-24 xl:bottom-32 -z-10 to-amber-900 from-amber-500 bg-gradient-to-b"
+      ></div>
+      <div class="container grid mx-auto grid-rows-1 px-2 place-content-end">
+        <img
+          src="./assets/couch.png"
+          class="mx-auto row-start-1 row-end-2 col-start-1 co;-end-2"
+        />
+        <img
+          src="./assets/app.svg"
+          class="mx-auto row-start-1 row-end-2 col-start-1 co;-end-2 w-40 sm:w-52 md:w-64 lg:w-72"
+        />
+      </div>
+    </header>
+
+    <main></main>
+
+    <!-- javascrit -->
+    <script>
+      const navBtn = document.querySelector("#menu");
+      const menuBar = document.querySelector('[role="menubar"]');
+
+      navBtn.addEventListener("click", () => {
+        const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
+        navBtn.setAttribute("aria-expanded", !isExpanded);
+        menuBar.classList.toggle("hidden");
+        menuBar.classList.toggle("flex");
+      });
+    </script>
   </body>
 </html>
