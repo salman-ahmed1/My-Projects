@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="min-h-screen px-5 bg-[url('images/image.png')] bg-cover">
+      <nav>
+        <div class="p-4 mx-auto container flex justify-between">
+          <img src="./images/logo.png" class="cursor-pointer h-7" alt="" />
+
+          <div
+            class="flex flex-grow text-white space-x-8 justify-center items-center"
+          >
+            <a href="#" class=" ">Home</a>
+            <a href="#" class=" ">About</a>
+            <a href="#" class=" ">Feaures</a>
+            <a href="#" class=" ">Contact</a>
+          </div>
+          <img src="./images/cart.png" class="h-7 cursor-pointer" />
+        </div>
+      </nav>
+      <div class="md:flex-row flex flex-col relative container mx-auto">
+        <div
+          class="md:w-1/2 md:text-left text-center px-6 mt-16 text-white space-y-6"
+        >
+          <h1 class="font-extrabold text-5xl leading-tight">
+            Grocery Delivery in
+            <span class="font-normal"> 15 Minutes</span>
+          </h1>
+
+          <p class="md:max-w-md">
+            Grocery offers a wide range of products , including fresh products
+            dairy, meat, baked goods, vegetables
+          </p>
+          <div
+            class="inline-flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row"
+          >
+            <a
+              href="#"
+              class="min-w-fit bg-orange-400 p-3 px-5 rounded-full text-center border border-transparent hover:bg-transparent hover:border duration-150 hover:border-yellow-300"
+            >
+              Order now
+            </a>
+            <a href="#" class="p-3 px-5 text-center rounded-xl"
+              >Download app
+              <span class="inline-block rotate-90 text-lg">&#10148;</span></a
+            >
+          </div>
+        </div>
+        <div class="mt-24">
+          <img
+            src="./images/grocery-image.png"
+            class="md:absolute right-0 md:top-0 md:w-1/2"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
