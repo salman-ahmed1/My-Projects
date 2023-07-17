@@ -43,7 +43,7 @@
         </button>
         <div
           role="menubar"
-          class="hidden flex-col items-center gap-4 absolute right-0 left-0 top-16 bg-amber-500 shadow-xl text-center p-6 font-medium lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full"
+          class="hidden z-30 flex-col items-center gap-4 absolute right-0 left-0 top-16 bg-amber-500 shadow-xl text-center p-6 font-medium lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full"
         >
           <a
             role="menuitem"
@@ -88,7 +88,57 @@
       </div>
     </header>
 
-    <main></main>
+    <main
+      class="grid gap-12 sm:gap-16 md:gap-24 lg:gap-32 px-8 overflow-hidden"
+    >
+      <a
+        href="#"
+        class="flex text-xl flex-row-reverse gap-2 py-2 px-6 my-12 bg-amber-500 mx-auto shadow-xl rounded-md focus:outline-none focus-visible:ring-4 ring-neutral-900 ring-offset-4 ring-offset-white hover:bg-amber-400 hover:shadow-none transition-all"
+        >Download The app
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+          />
+        </svg>
+      </a>
+
+      <section aria-label="quality" class="relative">
+        <h2 id="Qualities" class="sr-only">Our qualities</h2>
+        <div
+          class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between"
+        >
+          <div class="grid gap-4 justify-items-center text-center md:flex-1">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-24 h-24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                />
+              </svg>
+            </div>
+            <h3>Safe</h3>
+            <p>Our products are secure private out of the box</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- javascrit -->
     <script>
