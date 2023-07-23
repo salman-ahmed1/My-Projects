@@ -259,11 +259,43 @@
           class="absolute -z-30 -right-36 aspect-square md:border-8 border-amber-500 rounded-full md:w-64 lg:w-96 xl:max-w-lg -bottom-6"
         ></div>
         <div
-          class="bg-teal-900 h-24 -m-8 mt-11 xl:h-48 xl:absolute xl:mt-0 -z-10 xl:-bottom-6 w-screen"
+          class="bg-teal-900 h-32 -m-8 mt-11 xl:h-52 -bottom-6 xl:absolute xl:mt-0 -z-10 xl:-bottom-12 w-screen"
         ></div>
       </section>
 
-      <section aria-labelledby="Contacts"></section>
+      <section
+        aria-labelledby="Contacts"
+        class="container mx-auto overflow-hidden"
+        style="margin-top: -25px"
+      >
+        <div class="flex flex-wrap justify-center gap-12 md:gap-6 lg:gap-20">
+          <div class="relative md:max-w-sm md:flex-1">
+            <img src="./assets/lamp.png" class="mx-auto" alt="" />
+
+            <a
+              href="#"
+              class="flex w-fit md:mb-12 text-xl flex-row-reverse gap-2 py-2 px-6 mt-12 bg-amber-500 mx-auto shadow-xl rounded-md focus:outline-none focus-visible:ring-4 ring-neutral-900 ring-offset-4 ring-offset-white hover:bg-amber-400 hover:shadow-none transition-all"
+              >Sign up
+            </a>
+            <img
+              src="./assets/app.svg"
+              class="hidden absolute left-1/2 -translate-x-1/2 max-w-[16rem] xl:max-w-xs md:block drop-shadow-xl mb-24"
+              width="240"
+              alt=""
+            />
+          </div>
+
+          <form
+            action=""
+            class="md:flex-1 relative border-8 border-neutral-900 rounded-lg p-6 grid gap-7 max-w-lg my-4 md:my-12 lg:my-16 bg-white w-full"
+          >
+            <h2 id="contact" class="text-3xl font-bold">Lets connect</h2>
+            <div class="relative">
+              <input type="text" id="name" /> <label for="name"></label>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!-- javascrit -->
