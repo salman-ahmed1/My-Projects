@@ -286,15 +286,61 @@
 
           <form
             action=""
-            class="md:flex-1 relative border-8 border-neutral-900 rounded-lg p-6 grid gap-7 max-w-lg my-4 md:my-12 lg:my-16 bg-white w-full"
+            class="md:flex-1 relative border-8 border-neutral-900 rounded-lg p-6 grid gap-8 max-w-lg my-4 md:my-12 lg:my-16 bg-white w-full"
           >
             <h2 id="contact" class="text-3xl font-bold">Lets connect</h2>
             <div class="relative">
-              <input type="text" id="name" /> <label for="name"></label>
+              <input
+                type="text"
+                id="name"
+                class="peer p-3 border-4 placeholder-transparent border-amber-500 w-full rounded-md focus:ring-2 focus:ring-offset-2 focus:outline-none focus:border-amber-400 focus:ring-amber-400"
+                placeholder="YOUR NAME"
+              />
+              <label
+                for="name"
+                class="peer-focus:-top-4 peer-focus:left-3 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:text-neutral-900 peer-placeholder-shown:top-1/2 text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2"
+                >Your name</label
+              >
             </div>
+            <div class="relative">
+              <input
+                type="text"
+                id="email"
+                class="peer p-3 border-4 placeholder-transparent border-amber-500 w-full rounded-md focus:ring-2 focus:ring-offset-2 focus:outline-none focus:border-amber-400 focus:ring-amber-400"
+                placeholder="YOUR EMAIL"
+              />
+              <label
+                for="email"
+                class="peer-focus:-top-4 peer-focus:left-3 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:text-neutral-900 peer-placeholder-shown:top-1/2 text-neutral-500 text-sm font-bold uppercase absolute -top-4 left-2 -translate-y-1/2"
+                >Your email</label
+              >
+            </div>
+            <div class="relative">
+              <textarea
+                name="content"
+                placeholder="How can we help"
+                class="form-textarea resize-none p-3 peer border-4 placeholder-transparent border-amber-500 w-full rounded-md focus:ring-2 focus:ring-offset-2 focus:outline-none focus:border-amber-400 focus:ring-amber-400"
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+              <label
+                for="content"
+                class="absolute peer-focus:-top-4 peer-focus:left-3 transition-all peer-placeholder-shown:left-4 peer-placeholder-shown:text-neutral-900 peer-placeholder-shown:top-6 text-neutral-500 text-sm font-bold uppercase -top-3 left-2 -translate-y-1/2"
+                >How can we help</label
+              >
+            </div>
+            <a
+              role="menuitem"
+              class="py-2 px-6 bg-neutral-900 w-max text-white shadow-xl rounded-md focus:outline-none focus-visible:ring-4 ring-neutral-900 ring-offset-4 ring-offset-white hover:bg-teal-700 hover:shadow-none transition-all dark:text-neutral-900"
+              href=""
+              >Sign up</a
+            >
           </form>
         </div>
       </section>
+
+      <footer><hr /></footer>
     </main>
 
     <!-- javascrit -->
