@@ -1,3 +1,18 @@
 .site-numbers {
-  background-color: cadetblue;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(58, 7, 88),
+    rgb(88, 8, 180)
+  );
+  padding: 10rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.site-numbers > a {
+  padding: 1rem;
+  color: white;
+  text-decoration: overline;
 }
