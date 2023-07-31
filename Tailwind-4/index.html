@@ -8,15 +8,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-blue-950 text-white tracking-wider">
-    <header>
+    <header class="peer">
       <nav
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <div class="w-20 py-5 text-orange-400 font-bold text-3xl">
+        <div class="py-5 text-orange-400 font-bold text-3xl">
           <a href="#"><span class="text-white">Light</span>code</a>
         </div>
         <div>
-          <ul class="flex space-x-6 items-center">
+          <ul class="lg:flex hidden space-x-6 items-center">
             <li>
               <a href="#home" class="hover:text-orange-400 ease-in duration-200"
                 >Home</a
@@ -56,8 +56,26 @@
               >
             </li>
 
-            <li><button>Free Trial</button></li>
+            <li>
+              <button
+                class="bg-orange-400 px-8 py-3 rounded-md capitalize font-bold hover:opacity-90 ease-in duration-200"
+              >
+                Free Trial
+              </button>
+            </li>
           </ul>
+        </div>
+        <div
+          id="hamburger"
+          class="lg:hidden flex-col space-y-1 group text-white cursor-pointer"
+        >
+          <div
+            class="w-5 h-0.5 origin-top-left group-hover:rotate-45 group-hover:-translate-y-0.5 bg-white"
+          ></div>
+          <div class="w-5 h-0.5 bg-white group-hover:hidden"></div>
+          <div
+            class="w-5 h-0.5 origin-bottom-left group-hover:-rotate-45 group-hover:-translate-y-1 bg-white"
+          ></div>
         </div>
       </nav>
     </header>
