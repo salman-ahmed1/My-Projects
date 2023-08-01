@@ -1,9 +1,23 @@
+body {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.skill-list {
+  display: flex;
+}
+h1 {
+  width: 50%;
+}
+main {
+  margin: 3rem 4rem;
+}
 .site-numbers {
   background-image: linear-gradient(
     to bottom right,
     rgb(58, 7, 88),
     rgb(88, 8, 180)
   );
+  margin: 0 -5rem;
   padding: 10rem;
 
   display: flex;
@@ -12,7 +26,16 @@
   flex-wrap: wrap;
 }
 .site-numbers > a {
-  padding: 1rem;
-  color: white;
+  padding: 1rem 1.5rem;
+  color: blueviolet;
   text-decoration: overline;
+  background-color: rgb(92, 255, 133);
+  font-size: large;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: rgb(165, 255, 225);
+  color: black;
 }
