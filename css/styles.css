@@ -1,6 +1,6 @@
 body {
-  overflow: hidden;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .skill-list {
   display: flex;
@@ -26,16 +26,21 @@ main {
   flex-wrap: wrap;
 }
 .site-numbers > a {
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
+  aspect-ratio: 1/1;
   color: blueviolet;
   text-decoration: overline;
   background-color: rgb(92, 255, 133);
   font-size: large;
   border-radius: 50%;
   font-weight: bold;
+  text-align: center;
 }
 
 a:hover {
   background-color: rgb(165, 255, 225);
   color: black;
+}
+.left-hero {
+  height: 40vh;
 }
