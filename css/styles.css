@@ -6,8 +6,9 @@ body {
   display: flex;
 }
 h1 {
-  width: 50%;
+  width: 55%;
 }
+
 main {
   margin: 3rem 4rem;
 }
@@ -17,13 +18,14 @@ main {
     rgb(58, 7, 88),
     rgb(88, 8, 180)
   );
-  margin: 0 -5rem;
+  margin: 0 -4rem;
   padding: 10rem;
-
+  border-radius: 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  clear: both;
 }
 .site-numbers > a {
   padding: 1.5rem 1.5rem;
@@ -34,13 +36,16 @@ main {
   font-size: large;
   border-radius: 50%;
   font-weight: bold;
-  text-align: center;
+  vertical-align: bottom;
 }
 
 a:hover {
   background-color: rgb(165, 255, 225);
   color: black;
 }
-.left-hero {
-  height: 40vh;
+@media (max-width: 839px) {
+  h1 {
+    text-align: center;
+    width: 100%;
+  }
 }
