@@ -111,7 +111,7 @@
       </div>
       <!--burger menu-->
 <div class="md:hidden">
-  <div id="menu" class="flex-col flex py-8 absolute items-center self-end mt-10 drop-shadow-md
+  <div id="menu" class="flex-col py-8 absolute items-center self-end mt-10 drop-shadow-md
                       space-y-5 font-bold bg-white left-6 right-6 sm:self-center hidden">
           <a href="#" class="hover:text-blue-500">Pricing</a>
           <a href="#">Product</a>
@@ -385,11 +385,13 @@
 
 
 <script>
-  const btn = document.getElementById('mwnu-btn')
-  const nav = document.getElementById('mwnu')
+  const btn = document.getElementById('menu-btn')
+  const nav = document.getElementById('menu')
 
   btn.addEventListener('click' ,() =>{
     btn.classList.toggle('open')
+    nav.classList.toggle("hidden")
+    nav.classList.toggle("flex")
   })
   </script>
   </body>
