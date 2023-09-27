@@ -65,7 +65,7 @@
         transition: all 0.25s;
         position: relative;}
 
-        .hamburger-top,.hamburger-middle,.hamburger-bottom{
+      .hamburger-top,.hamburger-middle,.hamburger-bottom{
           position: absolute;
           top: 0;
           left: 0;
@@ -74,14 +74,36 @@
           background: black;
           transform: rotate(0);
           transition: all 0.5s;
-        }
-        .hamburger-middle{transform: translateY(8px);}
-        .hamburger-bottom{transform: translateY(16px);}
+      }
+      .hamburger-middle{transform: translateY(8px);}
+      .hamburger-bottom{transform: translateY(16px);}
 
       .open{transform: rotate(90deg) translateY(0px);}
       .open .hamburger-top{transform: rotate(45deg) translateY(8px) translate(8px);}
       .open .hamburger-middle{ display: none;}
-      .open .hamburger-bottom{transform: rotate(-45deg) translateY(8px) translate(-8px);}
+      .open .hamburger-bottom{transform: rotate(-45deg)  translate(-8px, 8px);}
+     
+      .absulut{
+       
+        background-color: white;
+      }
+
+      #menu{
+        position: absolute;
+        top: -3.5rem;
+        transform: translate(0 rem,0rem);
+        transition: all 3s  ; 
+        
+      }
+
+     
+
+      .fadeIn{
+       
+       transform: translateY(6rem)  ;
+        
+        
+      }
       </style>
   </head>
   <body>
@@ -110,14 +132,14 @@
           </button>
       </div>
       <!--burger menu-->
-<div class="md:hidden">
-  <div id="menu" class="flex-col py-8 absolute items-center self-end mt-10 drop-shadow-md
-                      space-y-5 font-bold bg-white left-6 right-6 sm:self-center hidden">
-          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl hover:text-white">Pricing</a>
-          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl hover:text-white">Product</a>
-          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl  hover:text-white">About us</a>
-          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl hover:text-white">Careers</a>
-          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl hover:text-white">Community</a></a>
+<div class="md:hidden absulut">
+  <div id="menu" class="flex-col py-8  items-center self-end mt-10 drop-shadow-md
+                      space-y-3 font-bold bg-white left-6 right-6 sm:self-center hidden ">
+          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl transition-colors  hover:text-white">Pricing</a>
+          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl transition-colors hover:text-white">Product</a>
+          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl transition-colors hover:text-white">About us</a>
+          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl transition-colors hover:text-white">Careers</a>
+          <a href="#" class="hover:bg-orange-300 p-3 text-center w-[115%] rounded-xl transition-colors hover:text-white">Community</a></a>
                       
   </div> 
 </div>
@@ -392,6 +414,11 @@
     btn.classList.toggle('open')
     nav.classList.toggle("hidden")
     nav.classList.toggle("flex")
+    nav.classList.toggle("fadeIn")
+    for (var i = 0; i < document.querySelectorAll("#menu > a").length ; i++ ) {
+      document.querySelectorAll("#menu > a").classList.toggle("fadeIn")
+    console.log( document.querySelectorAll("#menu>a")[i])   
+  }
   })
   </script>
   </body>

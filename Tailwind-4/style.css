@@ -1,0 +1,12 @@
+.exist {
+  transform: translateY(-5rem);
+  transition: all 0.8s ease-out;
+}
+#menu {
+  position: absolute;
+}
+.exist.animIn {
+  transition-delay: 1s;
+
+  transform: translateY(5rem);
+}
