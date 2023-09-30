@@ -133,3 +133,10 @@ span {
 .flex > a {
   color: white;
 }
+
+.tab-contents {
+  display: none;
+}
+.show {
+  display: block;
+}
