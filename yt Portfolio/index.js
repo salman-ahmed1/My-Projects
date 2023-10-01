@@ -2,14 +2,14 @@ alert();
 function hideShow(nam) {
   switch (nam.textContent) {
     case "Skills":
-      document.querySelectorAll(".tab-contents")[0].classList.add("show");
+      document.querySelectorAll(".tab-contents")[0].classList.toggle("show");
 
       break;
-    case "Education":
-      document.querySelectorAll(".tab-contents")[1].classList.add("show");
-      break;
     case "Experience":
-      document.querySelectorAll(".tab-contents")[2].classList.add("show");
+      document.querySelectorAll(".tab-contents")[2].classList.toggle("show");
+      break;
+    case "Education":
+      document.querySelectorAll(".tab-contents")[1].classList.toggle("show");
       break;
 
     default:
@@ -32,10 +32,11 @@ for (
       ) {
         document
           .querySelectorAll(".tab-links")
-          [i].classList.remove("active-link", "show");
-        document.querySelectorAll(".tab-content")[i].classList.remove("show");
+          [i].classList.remove("active-link");
+        document.querySelectorAll(".tab-contents")[i].classList.remove("show");
       }
       this.classList.toggle("active-link");
+
       hideShow(this);
     });
 }
