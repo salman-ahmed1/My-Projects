@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  margin: 2rem 2rem;
+  align-self: self-start;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+}
+.header {
+  padding: 0.5rem 1.5rem ;
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+}
+.container{
+  padding: 0 2rem;
+  
+}
+.bg{
+  padding: 1rem 0 0 0.5rem;
+  background-color: rgb(206, 218, 231);
+  font-size: x-large;
+  line-height: 2.5rem;
+}
+ul{
+  padding-left: 0;
+}
+ul > li {
+  list-style: none;
+  text-align: left;
+}
+li > input {
+  transform: translateY(1.5px);
+}
+
+.footer-txt {
+  text-align: center;
+}
