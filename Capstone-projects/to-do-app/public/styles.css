@@ -29,9 +29,10 @@ body {
 ul{
   padding-left: 0;
 }
-ul > li {
+ul li {
   list-style: none;
   text-align: left;
+  list-style-type: none;
 }
 li > input {
   transform: translateY(1.5px);
@@ -39,4 +40,8 @@ li > input {
 
 .footer-txt {
   text-align: center;
+  
+}
+.crossed{
+  text-decoration: line-through;
 }

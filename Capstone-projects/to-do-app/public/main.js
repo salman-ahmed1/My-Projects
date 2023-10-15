@@ -1,8 +1,20 @@
 
-for (i=0;i<ocument.querySelectorAll("input").length;i++) {
-document.querySelectorAll("input[type='checkbox']").addEvemtListner("click",(e)=>
+for (i=0;i<document.querySelectorAll("li").length;i++) {
+document.querySelectorAll("li")[i].addEventListener("click", function() {
 
-e.classlist.toggle("crossed")
-)
+this.firstElementChild.checked=true ;
+this.classList.toggle("crossed")
 
-}
+
+setTimeout(() => {for (i=0;i<document.querySelectorAll("li").length;i++) {
+    document.querySelectorAll("li")[i].addEventListener("click",function() {
+    
+    this.firstElementChild.checked=false ;
+    
+    
+    })}
+    
+}, 100);
+
+    
+})}
