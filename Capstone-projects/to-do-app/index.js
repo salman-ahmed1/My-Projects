@@ -9,8 +9,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
+  var h1= new Date().toDateString()
+ 
+
   var loc ="/"
-  const data={addr:loc, array:tArray}
+  const data={addr:loc, array:tArray, heading:h1,}
   res.render("index.ejs",{data});
 
 
@@ -19,7 +22,7 @@ app.get("/", (req, res) => {
 
   tArray.push(userData);
  
-  const data = { array: tArray };
+  const data = { array: tArray ,heading:h1};
   res.render("index.ejs", { data });
 });
 });
@@ -27,7 +30,8 @@ app.get("/", (req, res) => {
 
 app.get("/work", (req,res)=>{
   var loc="/work"
-  const data={addr:loc,array: wArray}
+  var h1= "Work"
+  const data={addr:loc,array: wArray, heading:h1}
   res.render("index.ejs",{data});
 
   
@@ -36,7 +40,7 @@ app.get("/work", (req,res)=>{
   
     wArray.push(userData);
    
-    const data = { array: wArray };
+    const data = { array: wArray,heading:h1 };
 
     res.render("index.ejs", { data });
    

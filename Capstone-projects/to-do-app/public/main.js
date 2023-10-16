@@ -1,20 +1,14 @@
 
-for (i=0;i<document.querySelectorAll("li").length;i++) {
-document.querySelectorAll("li")[i].addEventListener("click", function() {
+for (i=0;i<document.querySelectorAll(".list-inside").length;i++) {
+document.querySelectorAll(".list-inside")[i].addEventListener("click", function() {
 
-this.firstElementChild.checked=true ;
+this.firstElementChild.firstElementChild.checked=true ;
 this.classList.toggle("crossed")
 
 
-setTimeout(() => {for (i=0;i<document.querySelectorAll("li").length;i++) {
-    document.querySelectorAll("li")[i].addEventListener("click",function() {
-    
-    this.firstElementChild.checked=false ;
-    
-    
-    })}
-    
-}, 100);
 
+if ( this.classList.contains("crossed")==false) {
     
-})}
+    this.firstElementChild.firstElementChild.checked=false ;
+
+}})}
