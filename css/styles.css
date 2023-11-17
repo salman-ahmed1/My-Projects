@@ -1,9 +1,27 @@
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(0, 0, 0),
+    rgb(82, 82, 82)
+  );
+  color: white;
+  background-repeat: no-repeat;
 }
 .skill-list {
   display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+
+  background-color: rgb(70, 70, 70);
+  opacity: 95%;
+  padding: 0 2rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.skill-list * {
+  padding: 0;
+  list-style: none;
 }
 h1 {
   width: 55%;
@@ -19,14 +37,14 @@ main {
     rgb(58, 7, 88),
     rgb(88, 8, 180)
   );
-  margin: 0 -4rem;
+  margin: 0;
   padding: 10rem;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  clear: both;
+  /* clear: both; */
 }
 .site-numbers > a {
   padding: 1.5rem 1.5rem;
@@ -38,6 +56,7 @@ main {
   border-radius: 50%;
   font-weight: bold;
   vertical-align: bottom;
+  flex-shrink: 0;
 }
 
 a:hover {
@@ -48,5 +67,11 @@ a:hover {
   h1 {
     text-align: center;
     width: 100%;
+  }
+}
+@media (min-width: 839px) {
+  .skill-list {
+    justify-content: flex-start;
+    gap: 5rem;
   }
 }
