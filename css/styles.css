@@ -11,7 +11,7 @@ body {
 }
 .skill-list {
   display: flex;
-  gap: 1rem;
+  gap: 1.8rem;
   justify-content: space-between;
 
   background-color: rgb(70, 70, 70);
@@ -21,7 +21,7 @@ body {
 }
 .skill-list * {
   padding: 0;
-  list-style: none;
+  list-style: outside;
 }
 h1 {
   width: 55%;
@@ -39,7 +39,7 @@ main {
   );
   margin: 0;
   padding: 10rem;
-  border-radius: 1rem;
+  border-radius: 0 0 1rem 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -63,10 +63,23 @@ a:hover {
   background-color: rgb(165, 255, 225);
   color: black;
 }
+.grid {
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  border-radius: 0 0 1rem 0rem;
+}
+.side {
+  height: 100%;
+  background-color: rgb(68, 68, 68);
+  border-radius: 0 0 0rem 1rem;
+}
 @media (max-width: 839px) {
   h1 {
     text-align: center;
     width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 @media (min-width: 839px) {
