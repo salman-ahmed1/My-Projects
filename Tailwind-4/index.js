@@ -4,3 +4,4 @@ $("#hamburger").click(function () {
   $("#menu").toggleClass("exist");
   $(".menu").toggleClass("animIn");
 });
+var a = $("h1").html().split();
